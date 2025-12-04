@@ -14,7 +14,7 @@ public class Ex03_PageLoadStartegy {
 
         ChromeDriver driver=new ChromeDriver();
         driver.get("https://app.vwo.com/#/login");
-        driver.navigate().to();
+        driver.navigate().to("");
 
     }
 }
