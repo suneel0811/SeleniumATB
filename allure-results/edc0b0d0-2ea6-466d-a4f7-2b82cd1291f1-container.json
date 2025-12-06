@@ -1,0 +1,1 @@
+{"uuid":"edc0b0d0-2ea6-466d-a4f7-2b82cd1291f1","name":"Selenium6X","children":["1e4bd2d4-ab40-4520-b387-71d66b0b70ad"],"befores":[],"afters":[{"name":"closeBrowser","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1764913700624,"stop":1764913701087}],"start":1764913691820,"stop":1764913701090}
