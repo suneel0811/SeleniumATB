@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/ATP6X/Selenium/Selenium6X">
+        <classes>
+            <class name="org.example.practice.Ex04_ExplicitWait">
+                <methods>
+                    <include name="logInToVWO"/>
+                </methods>
+            </class>
+            <class name="org.example.practice.Ex06_FluentWait">
+                <methods>
+                    <include name="logInToVWO"/>
+                </methods>
+            </class>
+            <class name="org.example.practice.Ex07_AlertsUsingExplicit">
+                <methods>
+                    <include name="testALerts"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
