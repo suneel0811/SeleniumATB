@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="E:/ATP6X/Selenium/Selenium6X">
+        <classes>
+            <class name="org.example.test.test_PF.Test_Login">
+                <methods>
+                    <include name="testLoginNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
