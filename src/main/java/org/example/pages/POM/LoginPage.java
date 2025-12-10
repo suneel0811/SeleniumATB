@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.example.base.CommonToAllPage;
 
-public class LoginPage {
+public class LoginPage extends CommonToAllPage{
 
-    public void logInPage_POM() {
-
+    public LoginPage() {   // constructor required
+        super();           // ensures CommonToAllPage can access driver
     }
 
     private By userName = By.name("username");
@@ -17,18 +18,12 @@ public class LoginPage {
     private By errorMessage = By.id("js-notification-box-msg");
 
     public String logInPageVWO() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://app.vwo.com/#/login");
-        driver.findElement(userName).sendKeys("Suneel@gmail.com");
-        driver.findElement(password).sendKeys("password");
+        sendKeys(userName, "Suneel@gmail.com");
+        sendKeys(password, "password");
+        clickElement(logInBtn);
 
-
-        driver.findElement(logInBtn).click();
-        Thread.sleep(3000);
-        WebElement error_msg = driver.findElement(errorMessage);
-        String errorMsg = error_msg.getText();
-        return errorMsg;
+        WebElement msg = visibilityOfElement(errorMessage);
+        return msg.getText();
 
     }
 

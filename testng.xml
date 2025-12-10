@@ -5,13 +5,11 @@
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
 
-    <test verbose="2" preserve-order="true" name="E:/ATP6X/Selenium/Selenium6X">
+    <test verbose="2" preserve-order="true" parallel="methods" name="E:/ATP6X/Selenium/Selenium6X">
         <classes>
-            <class name="org.example.test.test_PF.Test_Login">
-                <methods>
-                    <include name="testLoginNegative"/>
-                </methods>
-            </class>
+            <class name="org.example.test.test_PF.Test_Login"></class>
+            <class name="org.example.test.test_POM.Test_Login"></class>
+
         </classes>
     </test>
 </suite>

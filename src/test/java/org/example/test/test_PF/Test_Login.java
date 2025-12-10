@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.IOException;
+import static org.example.driver.DriverManagerTL.getDriver;
 
-import static org.example.driver.DriverManager.driver;
 
 public class Test_Login extends CommonToAllTest {
     private static final Logger log = LogManager.getLogger(Test_Login.class);
@@ -21,7 +21,7 @@ public class Test_Login extends CommonToAllTest {
 
         //PF package
         log.info("Starting testing");
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.launchUrl();
         String errorMessage = loginPage.logInPageVWO();
         log.info("testcase validation");

@@ -8,14 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
-
+import static org.example.driver.DriverManagerTL.getDriver;
 public class LoginPage extends CommonToAllPage {
 
-     WebDriver driver;
-    public  LoginPage(WebDriver driver){
-        this.driver = driver;
+    public  LoginPage(){
 
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(), this);
     }
     @FindBy(name = "username")
     private WebElement userName;
